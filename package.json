@@ -1,0 +1,33 @@
+{
+  "name": "hennus_console",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hennu's-Dev",
+  "contributors": [
+    "OscarDev (https://github.com/Oscar-Dev0)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oscar-Dev0/hennus_console.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Oscar-Dev0/hennus_console/issues"
+  },
+  "homepage": "https://github.com/Oscar-Dev0/hennus_console#readme",
+  "devDependencies": {},
+  "keywords": [
+    "console"
+  ]
+}
