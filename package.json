@@ -1,5 +1,5 @@
 {
-  "name": "hennus_console",
+  "name": "@hennus/console",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
