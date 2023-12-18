@@ -1,12 +1,11 @@
 import { Color } from "colors";
 
-
 declare global {
-    interface Console {
-        center: typeof center;
-        removeANSIFormat: typeof removeANSIFormat;
-        square: typeof square;
-    }
+  interface Console {
+    center: typeof center;
+    removeANSIFormat: typeof removeANSIFormat;
+    square: typeof square;
+  }
 }
 
 /**
@@ -14,7 +13,7 @@ declare global {
  *
  * @param { string } text The text to center.
  */
-export function center(text: string) : void;
+export function center(text: string): void;
 
 /**
  * Removes ANSI formatting from the given string.
@@ -22,7 +21,7 @@ export function center(text: string) : void;
  * @param { string } str The string to remove ANSI formatting from.
  * @returns The string without ANSI formatting.
  */
-export function removeANSIFormat(str: string) :string;
+export function removeANSIFormat(str: string): string;
 
 /**
  * Displays the given text in a square on the console, with the given border and text colors.
@@ -31,6 +30,5 @@ export function removeANSIFormat(str: string) :string;
  * @param textC The color of the text.
  * @param borderC The color of the border.
  */
-export function square(text: string, textC?: colors, bordeC?: colors) : void;
+export function square(text: string, textC?: colors, bordeC?: colors): void;
 export type colors = keyof Color;
-
