@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            src
+            lib
             package.json
+            index.d.ts
       - uses: actions/setup-node@v4
         with:
           node-version: 20
