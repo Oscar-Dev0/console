@@ -1,4 +1,4 @@
-import { Color } from "colors";
+import kleur, { Kleur } from "kleur";
 
 declare global {
   interface Console {
@@ -31,4 +31,4 @@ export function removeANSIFormat(str: string): string;
  * @param borderC The color of the border.
  */
 export function square(text: string, textC?: colors, bordeC?: colors): void;
-export type colors = keyof Color;
+export type colors = keyof Kleur;
