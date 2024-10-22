@@ -1,5 +1,5 @@
 {
-  "name": "hennus-console",
+  "name": "@hennus/console",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
@@ -8,7 +8,6 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hennu's-Dev",
   "contributors": [
