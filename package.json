@@ -1,33 +1,45 @@
 {
   "name": "@oscardev/console",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
-  "types": "index.d.ts",
-  "directories": {
-    "lib": "lib"
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "require": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      }
+    }
   },
-  "scripts": {},
-  "author": "Hennu's-Dev",
-  "contributors": [
-    "OscarDev (https://github.com/Oscar-Dev0)"
+  "files": [
+    "lib"
   ],
+  "scripts": {},
+  "author": "OscarDev (https://github.com/Oscar-Dev0)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Oscar-Dev0/console.git"
   },
   "license": "ISC",
   "dependencies": {
-    "kleur": "latest"
+    "kleur": "latest",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
   },
   "bugs": {
     "url": "https://github.com/Oscar-Dev0/console/issues"
   },
   "homepage": "https://github.com/Oscar-Dev0/console#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20"
+  },
   "keywords": [
     "console",
-    "kleur",
-    "hennus"
+    "kleur"
   ]
 }
