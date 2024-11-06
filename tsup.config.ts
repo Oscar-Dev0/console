@@ -9,7 +9,6 @@ export default defineConfig({
   minify: false, // Desactiva la minificación
   outDir: "lib", // Directorio de salida
   splitting: false, // Desactiva el código dividido (opcional)
-  target: 'es2020', // Establece el objetivo de compilación a ES2020
+  target: "es2020", // Establece el objetivo de compilación a ES2020
   cjsInterop: true, // Habilita la interoperabilidad entre CommonJS y ES modules,
-
 });
