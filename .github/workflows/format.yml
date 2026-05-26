@@ -1,25 +1,33 @@
-name: autofix.ci  # needed to securely identify the workflow
+name: CI
 
 on:
   pull_request:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+
 permissions:
   contents: read
+
 jobs:
-  autofix:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          sparse-checkout: |
-            lib
-            package.json
-            index.d.ts
-      - uses: actions/setup-node@v4
+          version: 10.22.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npx prettier --write .
+          cache: pnpm
 
-      - uses: autofix-ci/action@d3e591514b99d0fca6779455ff8338516663f7cc
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build

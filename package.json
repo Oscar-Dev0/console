@@ -1,7 +1,7 @@
 {
   "name": "@oscardev/console",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Small color and layout helpers for Node.js console output.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "exports": {
@@ -20,6 +20,7 @@
     "lib"
   ],
   "scripts": {
+    "build": "tsup",
     "prepare": "tsup"
   },
   "author": "OscarDev (https://github.com/Oscar-Dev0)",
@@ -27,18 +28,19 @@
     "type": "git",
     "url": "git+https://github.com/Oscar-Dev0/console.git"
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
-    "kleur": "latest",
-    "tsup": "latest",
-    "typescript": "latest"
+    "kleur": "^4.1.5"
   },
+  "packageManager": "pnpm@10.22.0",
   "bugs": {
     "url": "https://github.com/Oscar-Dev0/console/issues"
   },
   "homepage": "https://github.com/Oscar-Dev0/console#readme",
   "devDependencies": {
-    "@types/node": "^20"
+    "@types/node": "^20.19.0",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3"
   },
   "keywords": [
     "console",

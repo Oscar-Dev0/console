@@ -1,35 +1,33 @@
-# 🎮 **Console Oscar for Kluer** 🖥️
+# @oscardev/console
 
-## 🚀 **Activar la Consola Personalizada**
+Small helpers for styled Node.js console output, powered by `kleur`.
 
-Para activar la consola personalizada de **Oscar**, sigue estos pasos:
+## Install
 
-1. **Importa las extensiones de la consola:**
-
-```ts
-// 🌟 Importa las extensiones del paquete 'console' de OscarDev
-import { consoleExtensions } from "@oscardev/console";
+```sh
+pnpm add @oscardev/console
 ```
 
-2. **Habilita las extensiones de la consola:**
+## Usage
 
 ```ts
-// 🔧 Habilita las extensiones personalizadas de la consola
+import kleur, { center, consoleExtensions, square } from "@oscardev/console";
+
+console.log(kleur.green("Ready"));
+center("Centered text");
+square("Hello");
+
 consoleExtensions.enable();
+console.center("Available on global console");
+console.square("Also available here");
+consoleExtensions.disable();
 ```
 
-3. **Declara el módulo para la tipificación:**
+## API
 
-```ts
-// 📚 Declarar la extensión en el módulo de 'console' para asegurar que 'extensionsEnabled' esté correctamente tipado
-declare module "@oscardev/console" {
-  // ✅ Marca 'extensionsEnabled' como verdadero para indicar que las extensiones están habilitadas
-  type extensionsEnabled = true;
-}
-```
-
-### ✨ **Resultado final**:
-
-Este código habilita las extensiones personalizadas de la consola y asegura que las configuraciones estén correctamente tipadas, ¡listo para usar en tu proyecto!
-
-¡Disfruta de la experiencia de desarrollo mejorada! 🎉
+- `center(text)`: prints centered text using the current terminal width.
+- `square(text, textColor?, borderColor?)`: prints text inside a colored ASCII box.
+- `removeANSIFormat(text)`: strips ANSI color codes from text.
+- `consoleExtensions.enable()`: adds the helpers to `globalThis.console`.
+- `consoleExtensions.disable()`: restores the original console.
+- `consoleExtensions.isEnabled()`: returns whether the proxy is active.
